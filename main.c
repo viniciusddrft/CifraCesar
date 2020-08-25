@@ -5,6 +5,7 @@
 //  Created by R2D2 on 23/07/17.
 //  Copyright © 2017 R2D2. All rights reserved.
 //
+//  modified by viniciusddrft
 
 #include <stdio.h>
 #include <string.h>
@@ -100,9 +101,55 @@ void decode(char *alphabet, char *codedMessage, int steps){
 
 int main(int argc, const char * argv[]) {
     char alphabet[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-    code(alphabet, "cyberpunk", 3);
+    char word[50];
+    int answer;
+    int key;
+
+    //banner
+    printf("main.c\n");
+    printf("Cifra de cesar\n");
+    printf("Created by R2D2 on 23/07/17.\n");
+    printf("credits -> by R2D2\n");
+    printf("Copyright © 2017 R2D2. All rights reserved.\n");
+    printf("#################################\n");
+    printf("### modified by viniciusddrft ###\n");
+    printf("#################################\n");
     printf("\n");
-    decode(alphabet, "fbehusxqn", -3);
     printf("\n");
+    printf("\n");
+
+    printf("Você quer decifrar ou cifrar?\n");
+    printf("1-decifrar\n");
+    printf("2-cifrar\n");
+    printf("--> ");
+    scanf("%d",&answer);
+    if (answer == 1){
+        printf("Qual palavra você quer decifrar ?\n");
+        printf("--> ");
+        scanf("%s",word);
+        printf("\n");
+        for (int counter; counter !=26; counter++){
+            printf("tentativa com a chave %d --> ",counter);
+            decode(alphabet, word, counter);
+            printf("\n");
+        }
+    }
+    else if (answer == 2){
+        printf("Qual palavra você quer cifrar ?\n");
+        printf("--> ");
+        scanf("%s",word);
+        printf("\n");
+        printf("Qual chave você quer fazer ?\n");
+        printf("--> ");
+        scanf("%d",&key);
+        printf("cryptografaco com a chave %d --> ",key);
+        code(alphabet, word, key);
+        printf("\n");
+    }
+    else{
+        printf("opção invalida\n");
+    }
+    
+
     return 0;
 }
