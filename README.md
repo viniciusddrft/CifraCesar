@@ -11,3 +11,7 @@ Para decifrar :
 7. Quando descobrir o deslocamento, aplicar no texto todo.
 
 Obs.: O livro que estava lendo orientava isso, embora eu discorde e ache que tem uma maneira bem mais simples. Mais de qualquer forma, isto serve para qualquer cifra de deslocamento de posições de caracteres baseada no alfabeto.
+
+
+
+agora ele decifra em todas as chaves e tbm cifra em qualquer chave que você quiser.
