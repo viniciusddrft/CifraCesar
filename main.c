@@ -139,12 +139,17 @@ int main(int argc, const char * argv[]) {
         printf("--> ");
         scanf("%s",word);
         printf("\n");
-        printf("Qual chave você quer fazer ?\n");
+        printf("Qual chave você quer fazer ? (escolha de 1 a 26)\n");
         printf("--> ");
         scanf("%d",&key);
-        printf("cryptografaco com a chave %d --> ",key);
-        code(alphabet, word, key);
-        printf("\n");
+        if(key <= 26 && key >= 1 ){
+            printf("cryptografaco com a chave %d --> ",key);
+            code(alphabet, word, key);
+            printf("\n");
+        }
+        else{
+            printf("Opção inválida");
+        }
     }
     else{
         printf("opção invalida\n");
