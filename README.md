@@ -15,4 +15,4 @@ Obs.: O livro que estava lendo orientava isso, embora eu discorde e ache que tem
 
 modified by viniciusddrft
 
-agora ele decifra em todas as chaves e tbm cifra em qualquer chave que você quiser.
+agora ele decifra em todas as chaves e também cifra em qualquer chave que você quiser.
